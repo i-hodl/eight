@@ -1,0 +1,188 @@
+/* Set the overall styles for the page */
+body {
+  margin: 0;
+  font-family: 'Inconsolata', sans-serif;
+  background-color: #222;
+}
+
+/* Styles for the logo */
+.logo {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position as needed */
+  z-index: 1;
+}
+
+/* Styles for the NFT owners section */
+#nft-owners {
+  display: flex;
+  width: fit-content;
+}
+
+/* Styles for a single NFT container */
+.single-nft {
+  margin: 0 auto;
+  padding: 2em;
+  background: url('./broken.png');
+  background-size: auto;
+  background-color: #1C1C1C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+}
+
+/* Styles for the NFT image container */
+.nft-image-container {
+  position: relative;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+/* Styles for the NFT image */
+#nft-img {
+  width: 70vw;
+  height: auto;
+  object-fit: cover;
+  border: 5px solid #001EFF;
+  border-radius: 10px;
+  box-shadow: 0 0 0 #fbff00, 0 0 0 #a407e3, -10px 10px 50px #060222, 0 0 0 #020202;
+}
+
+/* Responsive styles for the NFT image container on small screens */
+@media screen and (max-width: 600px) {
+  .nft-image-container {
+    width: 100%;
+  }
+}
+
+/* Styles for the NFT title */
+#nft-title {
+  position: absolute;
+  top: 1%;
+  left: 15%;
+  z-index: 1;
+  font-family: 'Orbitron', sans-serif;
+  font-size: xx-large;
+  color: #e8e8f7;
+  font-variant: small-caps;
+  padding: 20px;
+  background-color: rgb(0, 0, 0);
+  border: solid 2px #0000ff;
+}
+
+/* Styles for the NFT description */
+#nft-description {
+  width: 68vw;
+  font-size: large;
+  font-style: normal;
+  font-family: 'Inconsolata', sans-serif;
+  color:#cbcbff;
+  line-height: 1.5;
+  border: 5px #001EFF solid;
+  text-align: justify;
+  padding: 10px;
+  background-color: black;
+  border-radius: 1px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 1px #007bff;
+}
+
+/* Responsive styles for the NFT description on small screens */
+@media screen and (max-width: 600px) {
+  #nft-description {
+    width: 90%;
+    padding: 5px;
+  }
+}
+
+/* Styles for the NFT description inside a single NFT container */
+.single-nft .nft-description {
+  margin-top: 1em;
+  font-size: large;
+  line-height: 1.5;
+  text-align: left;
+  text-indent: 0%;
+  padding: 10px 10% 10%;
+
+
+}
+
+/* Styles for the links inside a single NFT container */
+.single-nft .nft-links {
+  margin-top: 1em;
+}
+
+/* Styles for the links inside a single NFT container */
+.single-nft .nft-links a {
+  display: inline-block;
+  margin: 0 0.5em;
+  padding: 0.5em 1em;
+  background-color: #0000ff;
+  color: #fff;
+  text-decoration: none;
+  border: #000000 solid 2px;
+  border-radius: 1px;
+  font-family: 'Inconsolata', sans-serif;
+}
+
+/* Styles for the links inside a single NFT container on hover */
+.single-nft .nft-links a:hover {
+  background-color: #000000;
+}
+
+/* Styles for the glitch effect */
+.glitch {
+  position: relative;
+  color: white;
+  font-size: 2em;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  text-shadow: 0.12em  #ff0000;
+  background: rgba(5, 4, 63, 0.234);
+  width: 100%;
+  height: 100%;
+  opacity: 30%;
+}
+
+.glitch::before {
+  animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  text-shadow: -0.06em 0 #00ff00;
+}
+
+.glitch::after {
+  animation: glitch-anim 0.1s infinite linear alternate-reverse;
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  text-shadow: -0.06em 0 #0000ff;
+}
+
+/* Keyframe animations for the glitch effect */
+@keyframes glitch-anim {
+  0%, 14%, 15%, 49%, 50%, 64%, 65%, 99%, 100% {
+    clip-path: polygon(0 25%, 100% 25%, 100% 75%, 0 75%);
+  }
+  4%, 24%, 40%, 60%, 80% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0%, 14%, 15%, 49%, 50%, 64%, 65%, 99%, 100% {
+    clip-path: polygon(0 33%, 100% 33%, 100% 66%, 0 66%);
+  }
+  4%, 24%, 40%, 60%, 80% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 80%, 0 80%);
+  }
+}

@@ -1,0 +1,344 @@
+/* Styles for HTML and body. Sets height and width to fill the viewport, removes margin and padding, and sets overflow to scroll */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+}
+
+/* Styles for logo. Sets size and position, also positions it above other elements (z-index) */
+.logo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+/* Styles for description. Sets width, font properties, border, padding, color, and margins */
+#description {
+  width: 80vw;
+  font-size: large;
+  font-style: normal;
+  font-weight: 200;
+  font-family: 'Inconsolata', sans-serif;
+  color:#00FF41;
+  line-height: 1.5;
+  border: 4px #00FF41 solid;
+  border-radius: 1px;
+  text-align: justify;
+  padding: 15px;
+  text-indent: 5%;
+  background-color: black;
+  border-radius: 1px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Styles for skip, gallery, and cards. Sets color, border, alignment, margin, padding, and hover effects */
+#skip, #gallery, #cards {
+  background-color: rgb(0, 0, 0);
+  font-family: 'Orbitron' , sans-serif;
+  font-size: medium;
+  color: #00FF41;
+  border: 2px solid #00FF41;
+  align-self: center;
+  margin-top: 30px;
+  padding: 10px;  /* Add some padding to make the buttons larger */
+  transition: all 0.3s ease;  /* This will animate the color change */
+  cursor: pointer;  /* Change the cursor to a hand pointer when hovering over the button */
+}
+
+/* Styles for skip. Sets bottom and left margins */
+#skip {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+/* Styles for gallery. Sets margin */
+#gallery {
+  margin: 10px;
+}
+
+/* Changes color when hovering over the button */
+#skip:hover, #gallery:hover {
+  background-color: #00ff00;
+  color: black;
+}
+
+/* Changes color and scale slightly when the button is clicked (active state) */
+#skip:active, #gallery:active {
+  background-color: #00cc00;
+  color: black;
+  transform: scale(0.95);
+}
+
+/* Styles for nft-grid. Sets display to grid, defines grid columns, gap between grid items, and overflow to scroll */
+#nft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+  gap: 20px;
+  overflow: scroll;
+}
+
+/* Styles for nft within the grid. Sets display to flex, direction of items in the flex container, background color, padding, border radius, cursor, margin, box shadow, font properties, padding, and overflow-wrap */
+#nft-grid .nft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#000000;
+  padding:2px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'dosis', sans-serif;
+  font-variant: small-caps;
+  font-size: large;
+  text-rendering: geometricPrecision;
+  color:#6274ff;
+  padding: 10px;
+  overflow-wrap: normal;
+}
+
+/* Styles for images within the nft. Sets max width and border radius */
+#nft-grid .nft img {
+  max-width:20%;
+  border-radius: 10px;
+}
+
+/* Styles for h2 within the nft. Sets top margin */
+#nft-grid .nft h2 {
+  margin-top: 20px;
+}
+
+/* Styles for nft-single. Sets display to flex, direction of items in the flex container, background color, padding, border radius, and box shadow */
+#nft-single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for images within nft-single. Sets max width and max height, height is auto for preserving aspect ratio */
+#nft-single img {
+  max-width: 100%;
+  max-height: 50%;
+  height: auto;
+}
+
+/* Styles for h2 within nft-single. Sets top margin */
+#nft-single h2 {
+  margin-top: 20px;
+}
+
+/* Styles for p within nft-single. Sets top margin and text alignment */
+#nft-single p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Styles for body. Sets display to flex, direction of items in the flex container, alignment of items, font family, and background color */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inconsolata', sans-serif;
+  background-color: #000000;
+}
+
+/* Styles for single-nft. Removes vertical margin, adds padding, sets animation, background, display, flex direction, vertical and horizontal alignment, text alignment, and overflow */
+.single-nft {
+  margin: 0 auto;
+  padding: 2em;
+  animation: static 1s infinite linear;
+  background: url('broken.png');
+  background-size: cover;
+  background-color: #1C1C1C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+}
+
+/* Animation for static */
+@keyframes static {
+  0% {background-position: 0 0;}
+  100% {background-position: 100% 100%;}
+}
+
+/* Styles for nft-img. Sets width, height, border, border radius, box shadow */
+#nft-img {
+  width: 100%;
+  height: auto;
+  border: 5px solid #001EFF;
+  border-radius: 10px;
+  box-shadow: 0 0 0 #fbff00, 0 0 0 #a407e3, -10px 10px 50px #060222, 0 0 0 #020202;
+}
+
+/* Styles for nft-title within single-nft. Sets top margin, font size, and font variant */
+.single-nft .nft-title {
+  margin-top: 2em;
+  font-size: xx-large !important;
+  font-variant:small-caps;
+}
+
+/* Styles for nft-title and section-header. Sets font family, font size, font variant, and color */
+#nft-title, .section-header {
+  font-family: 'Orbitron', sans-serif;
+  font-size: xx-large;
+  font-variant: small-caps;
+  color: #0ff;
+}
+
+/* Styles for nft-description. Sets width, height, overflow, font size, font style, font family, color, line height, border, text alignment, padding, text indentation, background color, border radius, top, left, right margin, and box shadow */
+#nft-description {
+  width: 60vw;
+  height: auto;
+  overflow: scroll;
+  font-size: medium;
+  font-style: normal;
+  font-family: 'B612', sans-serif;
+  color:#0ff;
+  line-height: 1.5;
+  border: 5px #001EFF solid;
+  text-align: justify;
+  padding: 15px;
+  text-indent: 5%;
+  background-color: black;
+  border-radius: 1px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 1px #007bff;
+}
+
+/* Styles for section-header within single-nft. Sets top margin, font size, text alignment, font variant, and color */
+.single-nft .section-header {
+  margin-top: 1em;
+  font-size: xx-large;
+  text-align: center;
+  font-variant: small-caps;
+  color: #0ff;
+}
+
+/* Styles for nft-description within single-nft. Sets top margin, font size, line height, text alignment, text indentation, and padding */
+.single-nft .nft-description {
+  margin-top: 1em;
+  font-size: large;
+  line-height: 1.5;
+  text-align: left;
+  text-indent: 10%;
+  padding: 0 10%;
+}
+
+/* Styles for nft-links within single-nft. Sets top margin */
+.single-nft .nft-links {
+  margin-top: 1em;
+}
+
+/* Styles for a within nft-links. Sets display, margins, padding, background color, text color, text decoration, and border radius */
+.single-nft .nft-links a {
+  display: inline-block;
+  margin: 0 0.5em;
+  padding: 0.5em 1em;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Styles for hover effect on a within nft-links */
+.single-nft .nft-links a:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for glitch. Sets position, color, and font size */
+.glitch {
+  position: relative;
+  color: white;
+  font-size: 2em;
+}
+
+/* Styles for before and after pseudo-elements for glitch. Sets content, position, left position, text shadow, background, overflow, width, and height */
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  text-shadow: 0.06em 0 #ff0000;
+  background: rgb(206, 7, 228);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* Styles for before pseudo-element for glitch. Sets animation and clip path */
+.glitch::before {
+  animation: noise-anim-2 5s infinite linear alternate-reverse;
+  clip: rect(44px, 450px, 56px, 0);
+}
+
+/* Styles for after pseudo-element for glitch. Sets animation and clip path */
+.glitch::after {
+  animation: noise-anim 5s infinite linear alternate-reverse;
+  clip: rect(34px, 450px, 38px, 0);
+}
+
+/* Animation for noise-anim and noise-anim-2 */
+@keyframes noise-anim {
+  0% {clip: rect(84px, 9999px, 86px, 0);}
+  5% {clip: rect(14px, 9999px, 96px, 0);}
+  10% {clip: rect(84px, 9999px, 40px, 0);}
+  15% {clip: rect(64px, 9999px, 46px, 0);}
+  20% {clip: rect(30px, 9999px, 85px, 0);}
+  25% {clip: rect(88px, 9999px, 31px, 0);}
+  30% {clip: rect(46px, 9999px, 49px, 0);}
+  35% {clip: rect(58px, 9999px, 50px, 0);}
+  40% {clip: rect(15px, 9999px, 99px, 0);}
+  45% {clip: rect(14px, 9999px, 33px, 0);}
+  50% {clip: rect(39px, 9999px, 81px, 0);}
+  55% {clip: rect(26px, 9999px, 94px, 0);}
+  60% {clip: rect(82px, 9999px, 33px, 0);}
+  65% {clip: rect(49px, 9999px, 97px, 0);}
+  70% {clip: rect(27px, 9999px, 98px, 0);}
+  75% {clip: rect(71px, 9999px, 20px, 0);}
+  80% {clip: rect(31px, 9999px, 85px, 0);}
+  85% {clip: rect(49px, 9999px, 63px, 0);}
+  90% {clip: rect(33px, 9999px, 51px, 0);}
+  95% {clip: rect(18px, 9999px, 76px, 0);}
+  100% {clip: rect(50px, 9999px, 44px, 0);}
+}
+
+@keyframes noise-anim-2 {
+  0% {clip: rect(29px, 9999px, 100px, 0);}
+  5% {clip: rect(53px, 9999px, 23px, 0);}
+  10% {clip: rect(73px, 9999px, 23px, 0);}
+  15% {clip: rect(4px, 9999px, 86px, 0);}
+  20% {clip: rect(96px, 9999px, 25px, 0);}
+  25% {clip: rect(25px, 9999px, 81px, 0);}
+  30% {clip: rect(55px, 9999px, 24px, 0);}
+  35% {clip: rect(88px, 9999px, 88px, 0);}
+  40% {clip: rect(30px, 9999px, 89px, 0);}
+  45% {clip: rect(39px, 9999px, 57px, 0);}
+  50% {clip: rect(46px, 9999px, 91px, 0);}
+  55% {clip: rect(5px, 9999px, 27px, 0);}
+  60% {clip: rect(49px, 9999px, 85px, 0);}
+  65% {clip: rect(97px, 9999px, 21px, 0);}
+  70% {clip: rect(69px, 9999px, 76px, 0);}
+  75% {clip: rect(36px, 9999px, 60px, 0);}
+  80% {clip: rect(4px, 9999px, 73px, 0);}
+  85% {clip: rect(84px, 9999px, 24px, 0);}
+  90% {clip: rect(76px, 9999px, 34px, 0);}
+  95% {clip: rect(96px, 9999px, 94px, 0);}
+  100% {clip: rect(92px, 9999px, 66px, 0);}
+}
